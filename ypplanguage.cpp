@@ -5,7 +5,7 @@
 #include "parlay/sequence.h"
 #include "scan.h"
 
-bool YppLanguageCheck(std::string code, int granuality) {
+bool YppLanguageCheck(std::string code, int granularity) {
   int n = code.length();
   parlay::sequence<int> a(n);
   parlay::parallel_for(
@@ -16,8 +16,8 @@ bool YppLanguageCheck(std::string code, int granuality) {
         else
           a[i] = -1;
       },
-      granuality);
-  auto b = Scan(a, granuality);
+      granularity);
+  auto b = Scan(a, granularity);
   if (b[n - 1] != 0) return false;
   bool flag = true;
   parlay::parallel_for(
@@ -25,7 +25,7 @@ bool YppLanguageCheck(std::string code, int granuality) {
       [&](int i) {
         if (b[i] < 0) flag = false;
       },
-      granuality);
+      granularity);
   return flag;
 }
 

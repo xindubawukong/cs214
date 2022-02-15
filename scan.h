@@ -4,7 +4,7 @@
 #include "parlay/sequence.h"
 
 parlay::sequence<int> Scan(const parlay::sequence<int>& a,
-                           int granuality = 10000);
+                           int granularity = 1);
 
 void ScanTest();
 

@@ -3,7 +3,7 @@
 
 #include <string>
 
-bool YppLanguageCheck(std::string code);
+bool YppLanguageCheck(std::string code, int granularity = 1);
 
 void YppLanguageTest();
 
