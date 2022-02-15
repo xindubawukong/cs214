@@ -4,10 +4,7 @@ project(main VERSION 0.1.0)
 include(CTest)
 enable_testing()
 
-set(SOURCE_FILES
-  main.cpp
-  scan.h scan.cpp
-)
+aux_source_directory(. SOURCE_FILES)
 add_executable(main ${SOURCE_FILES})
 
 find_package(Threads REQUIRED)

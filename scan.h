@@ -3,12 +3,9 @@
 
 #include "parlay/sequence.h"
 
-namespace dxy {
+parlay::sequence<int> Scan(const parlay::sequence<int>& a,
+                           int granuality = 10000);
 
-parlay::sequence<int> Scan(const parlay::sequence<int>& a, int granuality = 10000);
-
-void TestScan();
-
-}  // namespace dxy
+void ScanTest();
 
 #endif  // SCAN_H_

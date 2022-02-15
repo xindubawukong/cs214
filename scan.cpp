@@ -3,8 +3,6 @@
 #include "parlay/parallel.h"
 #include "parlay/sequence.h"
 
-namespace dxy {
-
 template <typename F>
 int Work1(const parlay::sequence<int>& a, parlay::sequence<int>& b, int l,
           int r, F f, int granuality) {
@@ -48,7 +46,7 @@ parlay::sequence<int> Scan(const parlay::sequence<int>& a, int granuality) {
   return c;
 }
 
-void TestScan() {
+void ScanTest() {
   int n = 10000000;
   parlay::sequence<int> a(n);
   for (int i = 0; i < n; i++) a[i] = i;
@@ -60,11 +58,9 @@ void TestScan() {
   for (int i = 0; i < n; i++) {
     if (b[i] != c[i]) pass = false;
   }
-  printf("scan test: ");
+  printf("Scan test: ");
   if (pass)
     printf("pass!\n");
   else
     printf("failed!\n");
 }
-
-}  // namespace dxy

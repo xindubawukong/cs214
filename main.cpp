@@ -1,9 +1,10 @@
 #include <iostream>
 
 #include "scan.h"
-#include "parlay/delayed_sequence.h"
+#include "ypplanguage.h"
 
 int main() {
-  dxy::TestScan();
+  ScanTest();
+  YppLanguageTest();
   return 0;
 }
