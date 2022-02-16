@@ -36,7 +36,7 @@ void YppLanguageTest() {
   assert(!YppLanguageCheck("((())", 1));
   assert(YppLanguageCheck("(()()((())))", 1));
   assert(!YppLanguageCheck("(()))(()", 1));
-  printf("Y++ Language test: pass!\n");
+  printf("YppLanguageTest: pass!\n");
 }
 
 }  // namespace hw1

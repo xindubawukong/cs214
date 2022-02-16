@@ -39,7 +39,7 @@ void IntegralTest() {
   double res = Integral(f, 100000000, 1, 2, 100000);
   double ans = 0.374027912;
   assert(abs(res - ans) < 1e-6);
-  printf("Integral test: pass!\n");
+  printf("IntegralTest: pass!\n");
 }
 
 }  // namespace hw1

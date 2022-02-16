@@ -47,7 +47,7 @@ parlay::sequence<int> Scan(const parlay::sequence<int>& a, int granularity) {
 }
 
 void ScanTest() {
-  int n = 10000000;
+  int n = 1000000;
   parlay::sequence<int> a(n);
   for (int i = 0; i < n; i++) a[i] = i;
   parlay::sequence<int> b(n);
@@ -58,5 +58,5 @@ void ScanTest() {
   for (int i = 0; i < n; i++) {
     assert(b[i] == c[i]);
   }
-  printf("Scan test: pass!\n");
+  printf("ScanTest: pass!\n");
 }
