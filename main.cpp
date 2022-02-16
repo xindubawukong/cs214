@@ -13,6 +13,7 @@ void RunAllTests() {
   hw1::YppLanguageTest();
   hw1::IntegralTest();
   hw2::GetKthTest();
+  hw2::MergeTest();
 }
 
 int main() {
