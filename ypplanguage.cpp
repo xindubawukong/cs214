@@ -5,6 +5,8 @@
 #include "parlay/sequence.h"
 #include "scan.h"
 
+namespace hw1 {
+
 bool YppLanguageCheck(std::string code, int granularity) {
   int n = code.length();
   parlay::sequence<int> a(n);
@@ -36,3 +38,5 @@ void YppLanguageTest() {
   assert(!YppLanguageCheck("(()))(()", 1));
   printf("Y++ Language test: pass!\n");
 }
+
+}  // namespace hw1

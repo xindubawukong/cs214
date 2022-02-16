@@ -4,6 +4,8 @@
 
 #include "parlay/parallel.h"
 
+namespace hw1 {
+
 template <typename Func>
 double Integral(Func& f, int n, double low, double high, int granularity) {
   double dx = (high - low) / n;
@@ -34,8 +36,10 @@ void IntegralTest() {
   auto f = [](double x) {
     return sin(x) * log(x);
   };
-  double res = Integral(f, 1000000000, 1, 2, 100000);
+  double res = Integral(f, 100000000, 1, 2, 100000);
   double ans = 0.374027912;
   assert(abs(res - ans) < 1e-6);
   printf("Integral test: pass!\n");
 }
+
+}  // namespace hw1

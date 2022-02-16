@@ -8,7 +8,7 @@
 
 int main() {
   ScanTest();
-  YppLanguageTest();
-  IntegralTest();
+  hw1::YppLanguageTest();
+  hw1::IntegralTest();
   return 0;
 }
