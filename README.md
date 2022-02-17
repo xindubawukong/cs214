@@ -21,3 +21,14 @@ $ make
 
 $ ./main
 ```
+
+Output:
+
+```
+ScanTest: pass!
+YppLanguageTest: pass!
+IntegralTest: pass!
+GetKthTest: pass!
+MergeTest: pass!
+QuickSortTest: pass!
+```
